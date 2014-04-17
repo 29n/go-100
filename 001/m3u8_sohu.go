@@ -113,7 +113,8 @@ func main() {
 	t := sohu_timestamp()
 	code := [4]int{23,12,131,1321}
 	m3u8 := "http://hot.vrs.sohu.com/ipad"
-	m3u8 = m3u8 + get_vid(url) + "_" + sohu_shift_en(t, code) + "_" + sohu_shift_en(vid, code) + ".m3u8"
+	vid := get_vid(url)
+	m3u8 = m3u8 + vid + "_" + sohu_shift_en(t, code) + "_" + sohu_shift_en(vid, code) + ".m3u8"
 
 	fmt.Println(m3u8)
 	
